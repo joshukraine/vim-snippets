@@ -677,12 +677,12 @@ snippet desc
 	describe ${1:`substitute(substitute(vim_snippets#Filename(), '_spec$', '', ''), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
 		${0}
 	end
-snippet descm
-	describe '${1:#method}' do
-		${0:pending 'Not implemented'}
+snippet des
+	describe "${1:#method}" do
+		${0:pending "Not implemented"}
 	end
-snippet cont
-	context '${1:message}' do
+snippet con
+	context "${1:message}" do
 		${0}
 	end
 snippet bef
@@ -714,15 +714,15 @@ snippet shared
 snippet ibl
 	it_behaves_like ${0:'shared examples name'}
 snippet it
-	it '${1:spec_name}' do
+	it "${1:spec_name}" do
 		${0}
 	end
 snippet its
 	its(:${1:method}) { should ${0} }
-snippet is
-	it { should ${0} }
-snippet isn
-	it { should_not ${0} }
+# snippet is
+# 	it { should ${0} }
+# snippet isn
+# 	it { should_not ${0} }
 snippet iexp
 	it { expect(${1:object}).${1} ${0} }
 snippet iexpb
